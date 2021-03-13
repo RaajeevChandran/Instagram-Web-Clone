@@ -1,0 +1,39 @@
+.instagram-heart {   
+    width: 114px;
+    height: 112px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: url("https://imgur.com/rksyGE8.png") no-repeat center/contain;
+    opacity: 0;
+    transform: scale(0);
+  }
+  
+ .instagram-heart {
+    animation-duration: 1000ms;
+    animation-name: like-heart-animation;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes like-heart-animation{ 
+    0% { opacity:0; transform:scale(0); }
+    15% { opacity:.9; transform:scale(1.2); }
+    30% { transform:scale(.95); }
+    45%,
+    80% { opacity:.9; transform:scale(1); }
+  }
+  
+  .liked{
+  animation: like-button-animation 0.45s;
+  animation-timing-function: ease-in-out;
+  transform: scale(1);
+}
+@keyframes like-button-animation {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.2) ;}
+  50% { transform: scale(0.95) ;}
+  100% { transform: scale(1); }
+}
